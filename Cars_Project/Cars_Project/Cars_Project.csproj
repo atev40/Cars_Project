@@ -133,7 +133,9 @@
     <None Include="изтеглен файл.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Без име.jpg" />
     <None Include="temp_5338_0.jpg" />
+    <None Include="POWER.jpg" />
     <Content Include="База данни1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

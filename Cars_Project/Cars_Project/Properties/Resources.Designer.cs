@@ -63,9 +63,29 @@ namespace Cars_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap POWER {
+            get {
+                object obj = ResourceManager.GetObject("POWER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap temp_5338_0 {
             get {
                 object obj = ResourceManager.GetObject("temp_5338_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Без_име {
+            get {
+                object obj = ResourceManager.GetObject("Без име", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

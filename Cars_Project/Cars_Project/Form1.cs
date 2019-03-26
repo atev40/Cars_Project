@@ -23,5 +23,22 @@ namespace Cars_Project
             this.idCarsTableAdapter.Fill(this.база_данни1DataSet1.IdCars);
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 frm = new Form2();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
