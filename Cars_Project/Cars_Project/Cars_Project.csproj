@@ -153,6 +153,7 @@
     <None Include="Без име.jpg" />
     <None Include="temp_5338_0.jpg" />
     <None Include="POWER.jpg" />
+    <None Include="ImageForm2.jpg" />
     <Content Include="База данни1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
