@@ -55,10 +55,13 @@ namespace Cars_Project
                 textBox1.Text = row.Cells[0].Value.ToString();
                 textBox2.Text = row.Cells[1].Value.ToString();
                 textBox3.Text = row.Cells[2].Value.ToString();
-                comboBox1.Text = row.Cells[3].Value.ToString();
+                textBox4.Text = row.Cells[3].Value.ToString();
                 comboBox2.Text = row.Cells[4].Value.ToString();
-                comboBox3.Text = row.Cells[5].Value.ToString();
-            
+                textBox5.Text = row.Cells[7].Value.ToString();
+                comboBox5.Text = row.Cells[5].Value.ToString();
+                comboBox6.Text = row.Cells[6].Value.ToString();
+
+
             }
         }
     }
