@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.маркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.моделDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.годинаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.двигателDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.горивоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.бройВратиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.новВносУпотребяванDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCarsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.база_данни1DataSet2 = new Cars_Project.База_данни1DataSet2();
             this.idCarsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.база_данни1DataSet1 = new Cars_Project.База_данни1DataSet1();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -64,26 +74,16 @@
             this.idCarsTableAdapter1 = new Cars_Project.База_данни1DataSet1TableAdapters.IdCarsTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.маркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.моделDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.годинаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.двигателDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.горивоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.бройВратиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.новВносУпотребяванDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.база_данни1DataSet2 = new Cars_Project.База_данни1DataSet2();
-            this.idCarsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idCarsTableAdapter2 = new Cars_Project.База_данни1DataSet2TableAdapters.IdCarsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -104,6 +104,65 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(823, 207);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // маркаDataGridViewTextBoxColumn
+            // 
+            this.маркаDataGridViewTextBoxColumn.DataPropertyName = "Brand";
+            this.маркаDataGridViewTextBoxColumn.HeaderText = "Brand";
+            this.маркаDataGridViewTextBoxColumn.Name = "маркаDataGridViewTextBoxColumn";
+            // 
+            // моделDataGridViewTextBoxColumn
+            // 
+            this.моделDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.моделDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.моделDataGridViewTextBoxColumn.Name = "моделDataGridViewTextBoxColumn";
+            // 
+            // годинаDataGridViewTextBoxColumn
+            // 
+            this.годинаDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.годинаDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.годинаDataGridViewTextBoxColumn.Name = "годинаDataGridViewTextBoxColumn";
+            // 
+            // двигателDataGridViewTextBoxColumn
+            // 
+            this.двигателDataGridViewTextBoxColumn.DataPropertyName = "Engine";
+            this.двигателDataGridViewTextBoxColumn.HeaderText = "Engine";
+            this.двигателDataGridViewTextBoxColumn.Name = "двигателDataGridViewTextBoxColumn";
+            // 
+            // горивоDataGridViewTextBoxColumn
+            // 
+            this.горивоDataGridViewTextBoxColumn.DataPropertyName = "Fuel";
+            this.горивоDataGridViewTextBoxColumn.HeaderText = "Fuel";
+            this.горивоDataGridViewTextBoxColumn.Name = "горивоDataGridViewTextBoxColumn";
+            // 
+            // бройВратиDataGridViewTextBoxColumn
+            // 
+            this.бройВратиDataGridViewTextBoxColumn.DataPropertyName = "Doors";
+            this.бройВратиDataGridViewTextBoxColumn.HeaderText = "Doors";
+            this.бройВратиDataGridViewTextBoxColumn.Name = "бройВратиDataGridViewTextBoxColumn";
+            // 
+            // новВносУпотребяванDataGridViewTextBoxColumn
+            // 
+            this.новВносУпотребяванDataGridViewTextBoxColumn.DataPropertyName = "Condition";
+            this.новВносУпотребяванDataGridViewTextBoxColumn.HeaderText = "Condition";
+            this.новВносУпотребяванDataGridViewTextBoxColumn.Name = "новВносУпотребяванDataGridViewTextBoxColumn";
+            // 
+            // ценаDataGridViewTextBoxColumn
+            // 
+            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.ценаDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
+            // 
+            // idCarsBindingSource2
+            // 
+            this.idCarsBindingSource2.DataMember = "IdCars";
+            this.idCarsBindingSource2.DataSource = this.база_данни1DataSet2;
+            // 
+            // база_данни1DataSet2
+            // 
+            this.база_данни1DataSet2.DataSetName = "База_данни1DataSet2";
+            this.база_данни1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // idCarsBindingSource1
             // 
@@ -216,9 +275,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(428, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 18;
-            this.label10.Text = "Prise from:";
+            this.label10.Text = "Price:";
             // 
             // checkBox4
             // 
@@ -314,10 +373,12 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(0, 114);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.TabIndex = 16;
             // 
             // label4
             // 
@@ -406,64 +467,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // маркаDataGridViewTextBoxColumn
-            // 
-            this.маркаDataGridViewTextBoxColumn.DataPropertyName = "Brand";
-            this.маркаDataGridViewTextBoxColumn.HeaderText = "Brand";
-            this.маркаDataGridViewTextBoxColumn.Name = "маркаDataGridViewTextBoxColumn";
-            // 
-            // моделDataGridViewTextBoxColumn
-            // 
-            this.моделDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.моделDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.моделDataGridViewTextBoxColumn.Name = "моделDataGridViewTextBoxColumn";
-            // 
-            // годинаDataGridViewTextBoxColumn
-            // 
-            this.годинаDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.годинаDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.годинаDataGridViewTextBoxColumn.Name = "годинаDataGridViewTextBoxColumn";
-            // 
-            // двигателDataGridViewTextBoxColumn
-            // 
-            this.двигателDataGridViewTextBoxColumn.DataPropertyName = "Engine";
-            this.двигателDataGridViewTextBoxColumn.HeaderText = "Engine";
-            this.двигателDataGridViewTextBoxColumn.Name = "двигателDataGridViewTextBoxColumn";
-            // 
-            // горивоDataGridViewTextBoxColumn
-            // 
-            this.горивоDataGridViewTextBoxColumn.DataPropertyName = "Fuel";
-            this.горивоDataGridViewTextBoxColumn.HeaderText = "Fuel";
-            this.горивоDataGridViewTextBoxColumn.Name = "горивоDataGridViewTextBoxColumn";
-            // 
-            // бройВратиDataGridViewTextBoxColumn
-            // 
-            this.бройВратиDataGridViewTextBoxColumn.DataPropertyName = "Doors";
-            this.бройВратиDataGridViewTextBoxColumn.HeaderText = "Doors";
-            this.бройВратиDataGridViewTextBoxColumn.Name = "бройВратиDataGridViewTextBoxColumn";
-            // 
-            // новВносУпотребяванDataGridViewTextBoxColumn
-            // 
-            this.новВносУпотребяванDataGridViewTextBoxColumn.DataPropertyName = "Condition";
-            this.новВносУпотребяванDataGridViewTextBoxColumn.HeaderText = "Condition";
-            this.новВносУпотребяванDataGridViewTextBoxColumn.Name = "новВносУпотребяванDataGridViewTextBoxColumn";
-            // 
-            // ценаDataGridViewTextBoxColumn
-            // 
-            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.ценаDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
-            // 
-            // база_данни1DataSet2
-            // 
-            this.база_данни1DataSet2.DataSetName = "База_данни1DataSet2";
-            this.база_данни1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idCarsBindingSource2
-            // 
-            this.idCarsBindingSource2.DataMember = "IdCars";
-            this.idCarsBindingSource2.DataSource = this.база_данни1DataSet2;
-            // 
             // idCarsTableAdapter2
             // 
             this.idCarsTableAdapter2.ClearBeforeFill = true;
@@ -481,6 +484,8 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet1)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -488,8 +493,6 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
