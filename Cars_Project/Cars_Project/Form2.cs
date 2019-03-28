@@ -50,13 +50,14 @@ namespace Cars_Project
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-               // textBox5.Text = row.Cells[0].Value.ToString();
-                textBox1.Text = row.Cells[1].Value.ToString();
-                textBox2.Text = row.Cells[2].Value.ToString();
-                //dateTimePicker1.Text = row.Cells[3].Value.ToString();
-                comboBox1.Text = row.Cells[4].Value.ToString();
-                comboBox2.Text = row.Cells[5].Value.ToString();
-                comboBox3.Text = row.Cells[6].Value.ToString();
+                //textBox5.Text = row.Cells[0].Value.ToString(); // id
+
+                textBox1.Text = row.Cells[0].Value.ToString();
+                textBox2.Text = row.Cells[1].Value.ToString();
+                textBox3.Text = row.Cells[2].Value.ToString();
+                comboBox1.Text = row.Cells[3].Value.ToString();
+                comboBox2.Text = row.Cells[4].Value.ToString();
+                comboBox3.Text = row.Cells[5].Value.ToString();
             
             }
         }
