@@ -63,6 +63,16 @@ namespace Cars_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImageForm2 {
+            get {
+                object obj = ResourceManager.GetObject("ImageForm2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap POWER {
             get {
                 object obj = ResourceManager.GetObject("POWER", resourceCulture);
