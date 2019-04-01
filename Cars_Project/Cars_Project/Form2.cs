@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace Cars_Project
 {
     public partial class Form2 : Form
     {
+        Vechile h = new Vechile();
         public Form2()
         {
             InitializeComponent();
@@ -23,7 +25,10 @@ namespace Cars_Project
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
         }
 
-        
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -44,7 +49,6 @@ namespace Cars_Project
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                //textBox5.Text = row.Cells[0].Value.ToString(); // id
 
                 textBox6.Text = row.Cells[0].Value.ToString();
                 textBox1.Text = row.Cells[1].Value.ToString();
@@ -59,13 +63,13 @@ namespace Cars_Project
 
             }
         }
-        Vechile h = new Vechile();
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             TabPage t = tabControl1.TabPages[0];
             tabControl1.SelectedTab = t;
-            Car2 c = new Car2();
+            Car c = new Car();
             c.Brand = textBox1.Text;
             c.Model = textBox2.Text;
             c.Year = textBox3.Text;
@@ -86,7 +90,7 @@ namespace Cars_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Car2 c = new Car2();
+            Car c = new Car();
             c.ID = textBox6.Text;
             c.Brand = textBox1.Text;
             c.Model = textBox2.Text;
@@ -107,12 +111,33 @@ namespace Cars_Project
         int selectedRow;
         private void button2_Click(object sender, EventArgs e)
         {
-            Car2 c = new Car2();
+            Car c = new Car();
             c.ID = textBox5.Text;
             h.Delete(c);
 
             selectedRow = dataGridView1.CurrentCell.RowIndex;
             dataGridView1.Rows.RemoveAt(selectedRow);
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tabControl1.Visible = true;
+            string[] lines = System.IO.File.ReadAllLines("C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Fuel.txt");
+            foreach (string str in lines)
+            { comboBox2.Items.Add(str); }
+            comboBox2.SelectedIndex = 0;
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tabControl1.Visible = true;
+            string[] lines = System.IO.File.ReadAllLines(" C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Condition.txt");
+            foreach(String str in lines)
+            {
+                comboBox4.Items.Add(str);
+            }
+            comboBox4.SelectedIndex = 0;
+        }
+
     }
 }

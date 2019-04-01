@@ -24,12 +24,12 @@ namespace Cars_Project
         {
             ConnectTo();
         }
-        public void Insert(Car2 c)
+        public void Insert(Car c)
         {
             try
             {
 
-                command.CommandText = "INSERT INTO IdCars(Brand, Model, Year, Engine, Fuel, Doors, Condition, Price, Image)" +
+                command.CommandText = "INSERT INTO IdCar(Brand, Model, Year, Engine, Fuel, Doors, Condition, Price, Image)" +
                     " VALUES ("
 
 
@@ -56,7 +56,7 @@ namespace Cars_Project
 
             }
         }
-        public void Update(Car2 c)
+        public void Update(Car c)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace Cars_Project
                 }
             }
         }
-        public void Delete(Car2 c)
+        public void Delete(Car c)
         {
             try
             {

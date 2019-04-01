@@ -1,0 +1,4 @@
+Diesel
+Benzin
+Hybryd
+Benzin/LPG

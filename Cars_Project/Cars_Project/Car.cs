@@ -8,7 +8,8 @@ using System.Data.OleDb;
 
 namespace Cars_Project
 {
-    class Car2
+    class Car
+
     {
         
         

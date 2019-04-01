@@ -241,6 +241,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create or Edit";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label7
             // 
@@ -279,6 +280,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(150, 26);
             this.comboBox4.TabIndex = 27;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -362,10 +364,16 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Petrol",
+            "Diesel",
+            "Hybrid",
+            "LPG/Petrol"});
             this.comboBox2.Location = new System.Drawing.Point(224, 146);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(150, 26);
             this.comboBox2.TabIndex = 10;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label6
             // 

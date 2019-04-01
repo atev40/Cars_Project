@@ -24,8 +24,7 @@ namespace Cars_Project
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'база_данни1DataSet.IdCars' table. You can move, or remove it, as needed.
-            this.idCarsTableAdapter.Fill(this.база_данни1DataSet.IdCars);
+           
 
         }
 
