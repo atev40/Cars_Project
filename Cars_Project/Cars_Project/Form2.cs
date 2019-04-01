@@ -19,11 +19,8 @@ namespace Cars_Project
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'база_данни1DataSet2.IdCars' table. You can move, or remove it, as needed.
+        { 
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
-           
-
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -52,17 +49,73 @@ namespace Cars_Project
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 //textBox5.Text = row.Cells[0].Value.ToString(); // id
 
-                textBox1.Text = row.Cells[0].Value.ToString();
-                textBox2.Text = row.Cells[1].Value.ToString();
-                textBox3.Text = row.Cells[2].Value.ToString();
-                textBox4.Text = row.Cells[3].Value.ToString();
-                comboBox2.Text = row.Cells[4].Value.ToString();
-                textBox5.Text = row.Cells[7].Value.ToString();
-                comboBox5.Text = row.Cells[5].Value.ToString();
-                comboBox6.Text = row.Cells[6].Value.ToString();
+                textBox6.Text = row.Cells[0].Value.ToString();
+                textBox1.Text = row.Cells[1].Value.ToString();
+                textBox2.Text = row.Cells[2].Value.ToString();
+                textBox3.Text = row.Cells[3].Value.ToString();
+                textBox4.Text = row.Cells[4].Value.ToString();
+                comboBox2.Text = row.Cells[5].Value.ToString();
+                comboBox3.Text = row.Cells[6].Value.ToString();
+                comboBox4.Text = row.Cells[7].Value.ToString();
+                textBox5.Text = row.Cells[8].Value.ToString();
 
 
             }
+        }
+        Vechile h = new Vechile();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TabPage t = tabControl1.TabPages[0];
+            tabControl1.SelectedTab = t;
+            Car2 c = new Car2();
+            c.Brand = textBox1.Text;
+            c.Model = textBox2.Text;
+            c.Year = textBox3.Text;
+            c.Engine = textBox4.Text;
+            c.Fuel = comboBox2.Text;
+            c.Doors = comboBox3.Text;
+            c.Condition = comboBox4.Text;
+            c.Price= textBox5.Text;
+            h.Insert(c);
+
+
+            DataTable dataTable = h.SelectAll();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = dataTable;
+            dataGridView1.DataSource = bindingSource;
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Car2 c = new Car2();
+            c.ID = textBox6.Text;
+            c.Brand = textBox1.Text;
+            c.Model = textBox2.Text;
+            c.Year = textBox3.Text;
+            c.Engine = textBox4.Text;
+            c.Fuel = comboBox2.Text;
+            c.Doors = comboBox3.Text;
+            c.Condition = comboBox4.Text;
+            c.Price = textBox5.Text;
+            h.Update(c);
+
+            DataTable dataTable = h.SelectAll();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = dataTable;
+            dataGridView1.DataSource = bindingSource;
+        }
+
+        int selectedRow;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Car2 c = new Car2();
+            c.ID = textBox5.Text;
+            h.Delete(c);
+
+            selectedRow = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(selectedRow);
         }
     }
 }

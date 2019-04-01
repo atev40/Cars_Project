@@ -68,22 +68,27 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 170);
+            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(593, 193);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 97);
+            this.button1.Size = new System.Drawing.Size(163, 97);
             this.button1.TabIndex = 0;
             this.button1.Text = "ПРОДЪЛЖИ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(565, 170);
+            this.button2.BackColor = System.Drawing.Color.Wheat;
+            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(12, 193);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 97);
+            this.button2.Size = new System.Drawing.Size(168, 97);
             this.button2.TabIndex = 1;
             this.button2.Text = "ИЗХОД";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1

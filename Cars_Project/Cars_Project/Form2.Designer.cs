@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.маркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.моделDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.годинаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +47,12 @@
             this.база_данни1DataSet1 = new Cars_Project.База_данни1DataSet1();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -69,10 +76,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.idCarsTableAdapter2 = new Cars_Project.База_данни1DataSet2TableAdapters.IdCarsTableAdapter();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet2)).BeginInit();
@@ -89,16 +92,17 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cyan;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.маркаDataGridViewTextBoxColumn,
             this.моделDataGridViewTextBoxColumn,
             this.годинаDataGridViewTextBoxColumn,
@@ -108,19 +112,25 @@
             this.новВносУпотребяванDataGridViewTextBoxColumn,
             this.ценаDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.idCarsBindingSource2;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(823, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(938, 238);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ID";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
             // 
             // маркаDataGridViewTextBoxColumn
             // 
@@ -194,7 +204,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.Location = new System.Drawing.Point(118, 225);
+            this.tabControl1.Location = new System.Drawing.Point(128, 256);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(644, 259);
@@ -202,10 +212,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.textBox6);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.comboBox6);
-            this.tabPage1.Controls.Add(this.comboBox5);
+            this.tabPage1.Controls.Add(this.comboBox4);
+            this.tabPage1.Controls.Add(this.comboBox3);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
@@ -227,48 +239,104 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(636, 228);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Create or Edit";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 18);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "ID";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(29, 34);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 25);
+            this.textBox6.TabIndex = 30;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(428, 147);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(150, 25);
+            this.textBox5.TabIndex = 29;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(224, 85);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(150, 25);
+            this.textBox4.TabIndex = 28;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(428, 87);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(150, 26);
+            this.comboBox4.TabIndex = 27;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "2/3",
+            "4/5"});
+            this.comboBox3.Location = new System.Drawing.Point(428, 32);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(150, 26);
+            this.comboBox3.TabIndex = 26;
+            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 160);
+            this.textBox3.Location = new System.Drawing.Point(224, 32);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 25);
             this.textBox3.TabIndex = 25;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(543, 175);
+            this.button3.BackColor = System.Drawing.Color.Wheat;
+            this.button3.Location = new System.Drawing.Point(462, 191);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 31);
             this.button3.TabIndex = 24;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "Update";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(462, 175);
+            this.button2.BackColor = System.Drawing.Color.Wheat;
+            this.button2.Location = new System.Drawing.Point(543, 191);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 31);
             this.button2.TabIndex = 23;
             this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(381, 175);
+            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(381, 191);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 22;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Insert";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(428, 71);
+            this.label10.Location = new System.Drawing.Point(425, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 18);
             this.label10.TabIndex = 18;
@@ -277,7 +345,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(425, 7);
+            this.label9.Location = new System.Drawing.Point(425, 61);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 18);
             this.label9.TabIndex = 15;
@@ -286,7 +354,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(208, 147);
+            this.label8.Location = new System.Drawing.Point(425, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 18);
             this.label8.TabIndex = 12;
@@ -295,7 +363,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(211, 90);
+            this.comboBox2.Location = new System.Drawing.Point(224, 146);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(150, 26);
             this.comboBox2.TabIndex = 10;
@@ -303,7 +371,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(208, 65);
+            this.label6.Location = new System.Drawing.Point(223, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 18);
             this.label6.TabIndex = 9;
@@ -312,7 +380,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(208, 9);
+            this.label5.Location = new System.Drawing.Point(223, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 18);
             this.label5.TabIndex = 7;
@@ -321,7 +389,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 139);
+            this.label4.Location = new System.Drawing.Point(221, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 18);
             this.label4.TabIndex = 5;
@@ -337,7 +405,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 90);
+            this.textBox2.Location = new System.Drawing.Point(29, 147);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 25);
             this.textBox2.TabIndex = 3;
@@ -345,7 +413,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 65);
+            this.label2.Location = new System.Drawing.Point(26, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 18);
             this.label2.TabIndex = 2;
@@ -353,7 +421,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 34);
+            this.textBox1.Location = new System.Drawing.Point(29, 87);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 25);
             this.textBox1.TabIndex = 1;
@@ -361,7 +429,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 9);
+            this.label1.Location = new System.Drawing.Point(26, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 18);
             this.label1.TabIndex = 0;
@@ -389,7 +457,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Wheat;
             this.button4.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(12, 282);
+            this.button4.Location = new System.Drawing.Point(12, 351);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 63);
             this.button4.TabIndex = 4;
@@ -401,7 +469,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Wheat;
             this.button5.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(788, 282);
+            this.button5.Location = new System.Drawing.Point(811, 351);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(97, 63);
             this.button5.TabIndex = 5;
@@ -413,42 +481,12 @@
             // 
             this.idCarsTableAdapter2.ClearBeforeFill = true;
             // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(211, 168);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(150, 26);
-            this.comboBox5.TabIndex = 26;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(428, 33);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(150, 26);
-            this.comboBox6.TabIndex = 27;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(211, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 25);
-            this.textBox4.TabIndex = 28;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(428, 92);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 25);
-            this.textBox5.TabIndex = 29;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cars_Project.Properties.Resources.ImageForm2;
-            this.ClientSize = new System.Drawing.Size(919, 478);
+            this.ClientSize = new System.Drawing.Size(953, 518);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.tabControl1);
@@ -498,6 +536,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private База_данни1DataSet2 база_данни1DataSet2;
+        private System.Windows.Forms.BindingSource idCarsBindingSource2;
+        private База_данни1DataSet2TableAdapters.IdCarsTableAdapter idCarsTableAdapter2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn маркаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn моделDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn годинаDataGridViewTextBoxColumn;
@@ -506,13 +553,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn бройВратиDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn новВносУпотребяванDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ценаDataGridViewTextBoxColumn;
-        private База_данни1DataSet2 база_данни1DataSet2;
-        private System.Windows.Forms.BindingSource idCarsBindingSource2;
-        private База_данни1DataSet2TableAdapters.IdCarsTableAdapter idCarsTableAdapter2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
