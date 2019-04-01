@@ -23,10 +23,7 @@ namespace Cars_Project
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
