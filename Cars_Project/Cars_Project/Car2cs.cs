@@ -29,7 +29,7 @@ namespace Cars_Project
             try
             {
 
-                command.CommandText = "INSERT INTO IdCars(Brand, Model, Year, Engine, Fuel, Doors, Condition, Price, Image)" +
+                command.CommandText = "INSERT INTO IdCar(Brand, Model, Year, Engine, Fuel, Doors, Condition, Price, Image)" +
                     " VALUES ("
 
 
