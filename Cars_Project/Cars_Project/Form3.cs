@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+
 
 namespace Cars_Project
 {
@@ -17,16 +19,23 @@ namespace Cars_Project
             InitializeComponent();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-           
+            button1.Size = new Size(100, 100);// za tezi chisla govorq
+            GraphicsPath Gcircle = new GraphicsPath();
+            Gcircle.AddEllipse(0, 0, 100, 00);
+            this.button1.Region = new Region(Gcircle);
+
 
         }
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {

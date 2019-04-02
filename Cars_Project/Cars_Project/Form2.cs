@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Drawing.Drawing2D;
 
 namespace Cars_Project
 {
@@ -19,7 +20,34 @@ namespace Cars_Project
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        { 
+        {
+            button4.Size = new Size(100, 100);
+            GraphicsPath Gcircle = new GraphicsPath();
+            Gcircle.AddEllipse(0,0, 100, 100);
+            this.button4.Region = new Region(Gcircle);
+
+            button5.Size = new Size(100, 100);
+            GraphicsPath Gcircle2 = new GraphicsPath();
+            Gcircle.AddEllipse(0, 0, 100,0);
+            this.button5.Region = new Region(Gcircle);
+
+
+            button1.Size = new Size(100, 30);
+            GraphicsPath Gcircle3 = new GraphicsPath();
+            Gcircle.AddEllipse(0, 200, 100,0);
+            this.button1.Region = new Region(Gcircle);
+
+            button3.Size = new Size(100, 30);
+            GraphicsPath Gcircle4 = new GraphicsPath();
+            Gcircle.AddEllipse(0, 200, 100, 0);
+            this.button3.Region = new Region(Gcircle);
+
+            button2.Size = new Size(100, 30);
+            GraphicsPath Gcircle5 = new GraphicsPath();
+            Gcircle.AddEllipse(100, 600, 300, 5);
+            this.button2.Region = new Region(Gcircle);
+
+
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
         }
 
