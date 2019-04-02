@@ -14,9 +14,12 @@ namespace Cars_Project
 {
     public partial class Form2 : Form
     {
+        int carID;
+
         public Form2()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -58,9 +61,16 @@ namespace Cars_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form3 frm = new Form3();
-            frm.Show();
+            if (carID <= 0)
+            {
+                MessageBox.Show("Please choose a car!", "No car chosen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                this.Hide();
+                Form3 frm = new Form3(carID.ToString());
+                frm.Show();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -76,6 +86,8 @@ namespace Cars_Project
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 //textBox5.Text = row.Cells[0].Value.ToString(); // id
+
+                carID = (int)row.Cells[0].Value;
 
                 textBox6.Text = row.Cells[0].Value.ToString();
                 textBox1.Text = row.Cells[1].Value.ToString();

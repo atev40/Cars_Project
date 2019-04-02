@@ -18,6 +18,7 @@ namespace Cars_Project
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
