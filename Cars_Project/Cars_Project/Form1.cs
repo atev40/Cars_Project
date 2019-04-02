@@ -30,8 +30,8 @@ namespace Cars_Project
 
             button1.Size = new Size(200, 200);
             GraphicsPath Gcircle2 = new GraphicsPath();
-            Gcircle.AddEllipse(0, 0, 0, 50);
-            this.button1.Region = new Region(Gcircle);
+            Gcircle2.AddEllipse(0, 50, 200, 100);
+            this.button1.Region = new Region(Gcircle2);
 
 
 

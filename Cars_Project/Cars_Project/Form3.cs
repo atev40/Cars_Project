@@ -23,9 +23,9 @@ namespace Cars_Project
         private void Form3_Load(object sender, EventArgs e)
         {
             button1.Size = new Size(100, 100);// za tezi chisla govorq
-            GraphicsPath Gcircle = new GraphicsPath();
-            Gcircle.AddEllipse(0, 0, 100, 00);
-            this.button1.Region = new Region(Gcircle);
+            GraphicsPath Gcircle6 = new GraphicsPath();
+            Gcircle6.AddEllipse(0,24,100, 50);
+            this.button1.Region = new Region(Gcircle6);
 
 
         }

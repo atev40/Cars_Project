@@ -23,29 +23,29 @@ namespace Cars_Project
         {
             button4.Size = new Size(100, 100);
             GraphicsPath Gcircle = new GraphicsPath();
-            Gcircle.AddEllipse(0,0, 100, 100);
+            Gcircle.AddEllipse(0,24, 100, 50);
             this.button4.Region = new Region(Gcircle);
 
             button5.Size = new Size(100, 100);
             GraphicsPath Gcircle2 = new GraphicsPath();
-            Gcircle.AddEllipse(0, 0, 100,0);
-            this.button5.Region = new Region(Gcircle);
+            Gcircle2.AddEllipse(0, 24, 100,50);
+            this.button5.Region = new Region(Gcircle2);
 
 
             button1.Size = new Size(100, 30);
             GraphicsPath Gcircle3 = new GraphicsPath();
-            Gcircle.AddEllipse(0, 200, 100,0);
-            this.button1.Region = new Region(Gcircle);
+            Gcircle3.AddEllipse(0, 0, 90,90);
+            this.button1.Region = new Region(Gcircle3);
 
             button3.Size = new Size(100, 30);
             GraphicsPath Gcircle4 = new GraphicsPath();
-            Gcircle.AddEllipse(0, 200, 100, 0);
-            this.button3.Region = new Region(Gcircle);
+            Gcircle4.AddEllipse(0, 0,90, 90);
+            this.button3.Region = new Region(Gcircle4);
 
             button2.Size = new Size(100, 30);
             GraphicsPath Gcircle5 = new GraphicsPath();
-            Gcircle.AddEllipse(100, 600, 300, 5);
-            this.button2.Region = new Region(Gcircle);
+            Gcircle5.AddEllipse(0, 0, 90, 90);
+            this.button2.Region = new Region(Gcircle5);
 
 
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
