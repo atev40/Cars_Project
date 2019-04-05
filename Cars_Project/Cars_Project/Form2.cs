@@ -101,7 +101,8 @@ namespace Cars_Project
 
             }
         }
-        
+
+        Vechile h = new Vechile();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -157,7 +158,7 @@ namespace Cars_Project
             dataGridView1.Rows.RemoveAt(selectedRow);
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+       /* private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             tabControl1.Visible = true;
             string[] lines = System.IO.File.ReadAllLines("C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Fuel.txt");
@@ -175,7 +176,7 @@ namespace Cars_Project
                 comboBox4.Items.Add(str);
             }
             comboBox4.SelectedIndex = 0;
-        }
+        }*/
 
     }
 }

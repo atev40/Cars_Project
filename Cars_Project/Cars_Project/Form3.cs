@@ -15,14 +15,15 @@ namespace Cars_Project
     public partial class Form3 : Form
     {
         private String carID;
-        String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
+        //String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
+        String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
         OleDbConnection connection;
         OleDbCommand command;
 
         private void ConnectTo()
         {
-            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
-            //connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+            //connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
             command = connection.CreateCommand();
         }
 
@@ -44,7 +45,7 @@ namespace Cars_Project
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            button1.Size = new Size(100, 100);// za tezi chisla govorq
+            button1.Size = new Size(100, 100);
             GraphicsPath Gcircle6 = new GraphicsPath();
             Gcircle6.AddEllipse(0,24,100, 50);
             this.button1.Region = new Region(Gcircle6);
@@ -98,6 +99,11 @@ namespace Cars_Project
             Form2 form2 = new Form2();
             this.Hide();
             form2.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
