@@ -8,20 +8,49 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace Cars_Project
 {
     public partial class Form2 : Form
     {
-        Vechile h = new Vechile();
+        int carID;
+
         public Form2()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        { 
+        {
+            button4.Size = new Size(100, 100);
+            GraphicsPath Gcircle = new GraphicsPath();
+            Gcircle.AddEllipse(0,24, 100, 50);
+            this.button4.Region = new Region(Gcircle);
+
+            button5.Size = new Size(100, 100);
+            GraphicsPath Gcircle2 = new GraphicsPath();
+            Gcircle2.AddEllipse(0, 24, 100,50);
+            this.button5.Region = new Region(Gcircle2);
+
+
+            button1.Size = new Size(100, 30);
+            GraphicsPath Gcircle3 = new GraphicsPath();
+            Gcircle3.AddEllipse(0, 0, 90,90);
+            this.button1.Region = new Region(Gcircle3);
+
+            button3.Size = new Size(100, 30);
+            GraphicsPath Gcircle4 = new GraphicsPath();
+            Gcircle4.AddEllipse(0, 0,90, 90);
+            this.button3.Region = new Region(Gcircle4);
+
+            button2.Size = new Size(100, 30);
+            GraphicsPath Gcircle5 = new GraphicsPath();
+            Gcircle5.AddEllipse(0, 0, 90, 90);
+            this.button2.Region = new Region(Gcircle5);
+
+
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
         }
 
@@ -32,9 +61,16 @@ namespace Cars_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form3 frm = new Form3();
-            frm.Show();
+            if (carID <= 0)
+            {
+                MessageBox.Show("Please choose a car!", "No car chosen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                this.Hide();
+                Form3 frm = new Form3(carID.ToString());
+                frm.Show();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -49,6 +85,8 @@ namespace Cars_Project
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+
+                carID = (int)row.Cells[0].Value;
 
                 textBox6.Text = row.Cells[0].Value.ToString();
                 textBox1.Text = row.Cells[1].Value.ToString();
