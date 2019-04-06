@@ -41,7 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,17 +159,17 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "label8";
             // 
-            // button1
+            // butBack
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(37, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 44);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butBack.BackColor = System.Drawing.Color.CadetBlue;
+            this.butBack.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butBack.Location = new System.Drawing.Point(37, 291);
+            this.butBack.Name = "butBack";
+            this.butBack.Size = new System.Drawing.Size(122, 44);
+            this.butBack.TabIndex = 23;
+            this.butBack.Text = "Back";
+            this.butBack.UseVisualStyleBackColor = false;
+            this.butBack.Click += new System.EventHandler(this.butBack_Click);
             // 
             // Form3
             // 
@@ -177,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cars_Project.Properties.Resources.ImageForm2;
             this.ClientSize = new System.Drawing.Size(792, 391);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.butBack);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -211,6 +211,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butBack;
     }
 }

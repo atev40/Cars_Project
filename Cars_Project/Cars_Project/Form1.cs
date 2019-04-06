@@ -24,15 +24,15 @@ namespace Cars_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            button2.Size = new Size(200, 200);
+            butExit.Size = new Size(200, 200);
             GraphicsPath Gcircle = new GraphicsPath();
             Gcircle.AddEllipse(0, 50, 200,100);
-            this.button2.Region = new Region(Gcircle);
+            this.butExit.Region = new Region(Gcircle);
 
-            button1.Size = new Size(200, 200);
+            butContinue.Size = new Size(200, 200);
             GraphicsPath Gcircle2 = new GraphicsPath();
             Gcircle2.AddEllipse(0, 50, 200, 100);
-            this.button1.Region = new Region(Gcircle2);
+            this.butContinue.Region = new Region(Gcircle2);
 
 
 
@@ -43,14 +43,14 @@ namespace Cars_Project
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void butContinue_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form2 frm = new Form2();
             frm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void butExit_Click(object sender, EventArgs e)
 
         {
             Application.Exit();

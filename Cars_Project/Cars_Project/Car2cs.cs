@@ -29,11 +29,8 @@ namespace Cars_Project
             try
             {
 
-                command.CommandText = "INSERT INTO IdCar(Brand, Model, Year, Engine, Fuel, Doors, Condition, Price, Image)" +
-                    " VALUES ("
-
-
-                   + "'" + c.Brand + "'" + "," + "'" + c.Model + "'" + "," + "'" + c.Year + "'" + "," + "'" + c.Engine + "'" + "," + "'" + c.Fuel + "'" + "," + "'" + c.Doors + "'" + "," + "'" + c.Condition + "'" + "," + "'" + c.Price + "'" + "," + "'" + c.Image + "'" + ")";
+                command.CommandText = "INSERT INTO IdCars(Brand, Model, Year, Engine, Fuel, Doors, Condition, Price)VALUES ("
+                    + "'" + c.Brand + "'" + "," + "'" + c.Model + "'" + "," + "'" + c.Year + "'" + "," + "'" + c.Engine + "'" + "," + "'" + c.Fuel + "'" + "," + "'" + c.Doors + "'" + "," + "'" + c.Condition + "'" + "," + "'" + c.Price + "'" + ")";
 
                 command.CommandType = CommandType.Text;
                 command.Connection = connection;
@@ -60,11 +57,8 @@ namespace Cars_Project
         {
             try
             {
-                command.CommandText = "Update IdCars SET Name=" +
-                   "'" + c.Brand + "'" + "," + "Model=" + "'" + c.Model + "'" + "," + "Year =" +
-                    "'" + c.Year + "'" + "," + "Engine =" + "'" + c.Engine + "'" + "," + "Fuel =" + "'" + c.Fuel + "'" +
-                   "," + "Doors=" + "'" + c.Doors + "'" + ","+ " Condition=" + c.Condition + "'" + "," + " Price=" + c.Price + "'" + "," 
-                   + " Image=" + c.Image + "'" + "," + " Where ID =" + c.ID;
+                command.CommandText = "Update IdCars SET Brand=" +
+                   "'" + c.Brand + "'" + "," +  "Model=" + "'" + c.Model + "'" + "," + "Year =" + "'" + c.Year + "'" + "," + "Engine =" + "'" + c.Engine + "'" + "," + "Fuel =" + "'" + c.Fuel + "'" +  "," + "Doors=" + "'" + c.Doors + "'" + ","+ " Condition=" + "'" + c.Condition + "'" + "," + " Price=" + "'" + c.Price + "'"  +  " Where ID =" + c.ID;
 
 
                 command.CommandType = CommandType.Text;

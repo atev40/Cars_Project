@@ -45,10 +45,10 @@ namespace Cars_Project
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            button1.Size = new Size(100, 100);
+            butBack.Size = new Size(100, 100);
             GraphicsPath Gcircle6 = new GraphicsPath();
             Gcircle6.AddEllipse(0,24,100, 50);
-            this.button1.Region = new Region(Gcircle6);
+            this.butBack.Region = new Region(Gcircle6);
             loadCarInfo(carID);
         }
 
@@ -94,7 +94,7 @@ namespace Cars_Project
 
         
 
-        private void button1_Click(object sender, EventArgs e)
+        private void butBack_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             this.Hide();

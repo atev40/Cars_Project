@@ -34,8 +34,8 @@
             this.база_данни1DataSet = new Cars_Project.База_данни1DataSet();
             this.базаданни1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idCarsTableAdapter = new Cars_Project.База_данни1DataSet1TableAdapters.IdCarsTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.butContinue = new System.Windows.Forms.Button();
+            this.butExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.база_данни1DataSet)).BeginInit();
@@ -66,42 +66,39 @@
             // 
             this.idCarsTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
+            // butContinue
             // 
-            this.button1.BackColor = System.Drawing.Color.Wheat;
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(721, 162);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 119);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ПРОДЪЛЖИ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butContinue.BackColor = System.Drawing.Color.Wheat;
+            this.butContinue.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butContinue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butContinue.Location = new System.Drawing.Point(541, 132);
+            this.butContinue.Name = "butContinue";
+            this.butContinue.Size = new System.Drawing.Size(163, 97);
+            this.butContinue.TabIndex = 0;
+            this.butContinue.Text = "ПРОДЪЛЖИ";
+            this.butContinue.UseVisualStyleBackColor = false;
+            this.butContinue.Click += new System.EventHandler(this.butContinue_Click);
             // 
-            // button2
+            // butExit
             // 
-            this.button2.BackColor = System.Drawing.Color.Wheat;
-            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(32, 152);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 119);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "ИЗХОД";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.butExit.BackColor = System.Drawing.Color.Wheat;
+            this.butExit.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butExit.Location = new System.Drawing.Point(24, 124);
+            this.butExit.Name = "butExit";
+            this.butExit.Size = new System.Drawing.Size(168, 97);
+            this.butExit.TabIndex = 1;
+            this.butExit.Text = "ИЗХОД";
+            this.butExit.UseVisualStyleBackColor = false;
+            this.butExit.Click += new System.EventHandler(this.butExit_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cars_Project.Properties.Resources.Без_име;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.butExit);
+            this.Controls.Add(this.butContinue);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -119,8 +116,8 @@
         private База_данни1DataSet1 база_данни1DataSet1;
         private System.Windows.Forms.BindingSource idCarsBindingSource;
         private База_данни1DataSet1TableAdapters.IdCarsTableAdapter idCarsTableAdapter;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button butContinue;
+        private System.Windows.Forms.Button butExit;
     }
 }
 

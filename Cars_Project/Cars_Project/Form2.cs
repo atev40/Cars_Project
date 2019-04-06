@@ -24,31 +24,31 @@ namespace Cars_Project
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            button4.Size = new Size(100, 100);
+            butPrevPage.Size = new Size(100, 100);
             GraphicsPath Gcircle = new GraphicsPath();
             Gcircle.AddEllipse(0,24, 100, 50);
-            this.button4.Region = new Region(Gcircle);
+            this.butPrevPage.Region = new Region(Gcircle);
 
-            button5.Size = new Size(100, 100);
+            butNextPage.Size = new Size(100, 100);
             GraphicsPath Gcircle2 = new GraphicsPath();
             Gcircle2.AddEllipse(0, 24, 100,50);
-            this.button5.Region = new Region(Gcircle2);
+            this.butNextPage.Region = new Region(Gcircle2);
 
 
-            button1.Size = new Size(100, 30);
+            butInsert.Size = new Size(100, 30);
             GraphicsPath Gcircle3 = new GraphicsPath();
             Gcircle3.AddEllipse(0, 0, 90,90);
-            this.button1.Region = new Region(Gcircle3);
+            this.butInsert.Region = new Region(Gcircle3);
 
-            button3.Size = new Size(100, 30);
+            butUpdate.Size = new Size(100, 30);
             GraphicsPath Gcircle4 = new GraphicsPath();
             Gcircle4.AddEllipse(0, 0,90, 90);
-            this.button3.Region = new Region(Gcircle4);
+            this.butUpdate.Region = new Region(Gcircle4);
 
-            button2.Size = new Size(100, 30);
+            butDel.Size = new Size(100, 30);
             GraphicsPath Gcircle5 = new GraphicsPath();
             Gcircle5.AddEllipse(0, 0, 90, 90);
-            this.button2.Region = new Region(Gcircle5);
+            this.butDel.Region = new Region(Gcircle5);
 
 
             this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
@@ -59,7 +59,7 @@ namespace Cars_Project
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void butNextPage_Click(object sender, EventArgs e)
         {
             if (carID <= 0)
             {
@@ -73,7 +73,7 @@ namespace Cars_Project
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void butPrevPage_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 frm = new Form1();
@@ -104,7 +104,7 @@ namespace Cars_Project
 
         Vechile h = new Vechile();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void butInsert_Click(object sender, EventArgs e)
         {
             TabPage t = tabControl1.TabPages[0];
             tabControl1.SelectedTab = t;
@@ -127,7 +127,7 @@ namespace Cars_Project
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void butUpdate_Click(object sender, EventArgs e)
         {
             Car c = new Car();
             c.ID = textBox6.Text;
@@ -148,7 +148,7 @@ namespace Cars_Project
         }
 
         int selectedRow;
-        private void button2_Click(object sender, EventArgs e)
+        private void butDel_Click(object sender, EventArgs e)
         {
             Car c = new Car();
             c.ID = textBox5.Text;

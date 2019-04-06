@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.маркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +54,9 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butUpdate = new System.Windows.Forms.Button();
+            this.butDel = new System.Windows.Forms.Button();
+            this.butInsert = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,8 +73,8 @@
             this.idCarsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idCarsTableAdapter = new Cars_Project.База_данни1DataSetTableAdapters.IdCarsTableAdapter();
             this.idCarsTableAdapter1 = new Cars_Project.База_данни1DataSet1TableAdapters.IdCarsTableAdapter();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.butPrevPage = new System.Windows.Forms.Button();
+            this.butNextPage = new System.Windows.Forms.Button();
             this.idCarsTableAdapter2 = new Cars_Project.База_данни1DataSet2TableAdapters.IdCarsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource2)).BeginInit();
@@ -92,14 +92,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cyan;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -112,14 +112,14 @@
             this.новВносУпотребяванDataGridViewTextBoxColumn,
             this.ценаDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.idCarsBindingSource2;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(1, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(959, 254);
@@ -219,9 +219,9 @@
             this.tabPage1.Controls.Add(this.comboBox4);
             this.tabPage1.Controls.Add(this.comboBox3);
             this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.butUpdate);
+            this.tabPage1.Controls.Add(this.butDel);
+            this.tabPage1.Controls.Add(this.butInsert);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
@@ -302,42 +302,42 @@
             this.textBox3.Size = new System.Drawing.Size(100, 25);
             this.textBox3.TabIndex = 25;
             // 
-            // button3
+            // butUpdate
             // 
-            this.button3.BackColor = System.Drawing.Color.Wheat;
-            this.button3.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(249, 197);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.butUpdate.BackColor = System.Drawing.Color.Wheat;
+            this.butUpdate.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butUpdate.Location = new System.Drawing.Point(249, 197);
+            this.butUpdate.Name = "butUpdate";
+            this.butUpdate.Size = new System.Drawing.Size(75, 31);
+            this.butUpdate.TabIndex = 24;
+            this.butUpdate.Text = "Update";
+            this.butUpdate.UseVisualStyleBackColor = false;
+            this.butUpdate.Click += new System.EventHandler(this.butUpdate_Click);
             // 
-            // button2
+            // butDel
             // 
-            this.button2.BackColor = System.Drawing.Color.Wheat;
-            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(391, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.butDel.BackColor = System.Drawing.Color.Wheat;
+            this.butDel.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butDel.Location = new System.Drawing.Point(391, 197);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(75, 31);
+            this.butDel.TabIndex = 23;
+            this.butDel.Text = "Delete";
+            this.butDel.UseVisualStyleBackColor = false;
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
-            // button1
+            // butInsert
             // 
-            this.button1.BackColor = System.Drawing.Color.Wheat;
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(107, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butInsert.BackColor = System.Drawing.Color.Wheat;
+            this.butInsert.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butInsert.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butInsert.Location = new System.Drawing.Point(107, 197);
+            this.butInsert.Name = "butInsert";
+            this.butInsert.Size = new System.Drawing.Size(75, 31);
+            this.butInsert.TabIndex = 22;
+            this.butInsert.Text = "Insert";
+            this.butInsert.UseVisualStyleBackColor = false;
+            this.butInsert.Click += new System.EventHandler(this.butInsert_Click);
             // 
             // label10
             // 
@@ -464,29 +464,29 @@
             // 
             this.idCarsTableAdapter1.ClearBeforeFill = true;
             // 
-            // button4
+            // butPrevPage
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button4.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(12, 384);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 63);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Предишна страница";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.butPrevPage.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.butPrevPage.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butPrevPage.Location = new System.Drawing.Point(12, 384);
+            this.butPrevPage.Name = "butPrevPage";
+            this.butPrevPage.Size = new System.Drawing.Size(120, 63);
+            this.butPrevPage.TabIndex = 4;
+            this.butPrevPage.Text = "Предишна страница";
+            this.butPrevPage.UseVisualStyleBackColor = false;
+            this.butPrevPage.Click += new System.EventHandler(this.butPrevPage_Click);
             // 
-            // button5
+            // butNextPage
             // 
-            this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button5.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(831, 386);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 63);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Следваща страница";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.butNextPage.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.butNextPage.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butNextPage.Location = new System.Drawing.Point(831, 386);
+            this.butNextPage.Name = "butNextPage";
+            this.butNextPage.Size = new System.Drawing.Size(118, 63);
+            this.butNextPage.TabIndex = 5;
+            this.butNextPage.Text = "Следваща страница";
+            this.butNextPage.UseVisualStyleBackColor = false;
+            this.butNextPage.Click += new System.EventHandler(this.butNextPage_Click);
             // 
             // idCarsTableAdapter2
             // 
@@ -498,8 +498,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cars_Project.Properties.Resources.ImageForm2;
             this.ClientSize = new System.Drawing.Size(961, 552);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.butNextPage);
+            this.Controls.Add(this.butPrevPage);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
@@ -535,9 +535,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butUpdate;
+        private System.Windows.Forms.Button butDel;
+        private System.Windows.Forms.Button butInsert;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -545,8 +545,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button butPrevPage;
+        private System.Windows.Forms.Button butNextPage;
         private База_данни1DataSet2 база_данни1DataSet2;
         private System.Windows.Forms.BindingSource idCarsBindingSource2;
         private База_данни1DataSet2TableAdapters.IdCarsTableAdapter idCarsTableAdapter2;
