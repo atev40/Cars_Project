@@ -72,15 +72,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>База_данни1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="База_данни1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>База_данни1DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="База_данни1DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>База_данни1DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="База_данни1DataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>База_данни1DataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="База_данни1DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>База_данни1DataSet4.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -126,17 +131,6 @@
     <None Include="База_данни1DataSet.xss">
       <DependentUpon>База_данни1DataSet.xsd</DependentUpon>
     </None>
-    <None Include="База_данни1DataSet1.xsc">
-      <DependentUpon>База_данни1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="База_данни1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>База_данни1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="База_данни1DataSet1.xss">
-      <DependentUpon>База_данни1DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="База_данни1DataSet2.xsc">
       <DependentUpon>База_данни1DataSet2.xsd</DependentUpon>
     </None>
@@ -148,6 +142,28 @@
     <None Include="База_данни1DataSet2.xss">
       <DependentUpon>База_данни1DataSet2.xsd</DependentUpon>
     </None>
+    <None Include="База_данни1DataSet31.xsc">
+      <DependentUpon>База_данни1DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="База_данни1DataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>База_данни1DataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="База_данни1DataSet31.xss">
+      <DependentUpon>База_данни1DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="База_данни1DataSet4.xsc">
+      <DependentUpon>База_данни1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="База_данни1DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>База_данни1DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="База_данни1DataSet4.xss">
+      <DependentUpon>База_данни1DataSet4.xsd</DependentUpon>
+    </None>
     <None Include="изтеглен файл.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +171,7 @@
     <None Include="temp_5338_0.jpg" />
     <None Include="POWER.jpg" />
     <None Include="ImageForm2.jpg" />
-    <Content Include="База данни1.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="База данни1.accdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,9 @@ namespace Cars_Project
         OleDbCommand command;
         private void ConnectTo()
         {
-            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+            //connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+             connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+
             command = connection.CreateCommand();
         }
         public Vechile()
@@ -55,18 +57,19 @@ namespace Cars_Project
         }
         public void Update(Car c)
         {
-            try
-            {
+            //try
+            //{
                 command.CommandText = "Update IdCars SET Brand=" +
-                   "'" + c.Brand + "'" + "," +  "Model=" + "'" + c.Model + "'" + "," + "Year =" + "'" + c.Year + "'" + "," + "Engine =" + "'" + c.Engine + "'" + "," + "Fuel =" + "'" + c.Fuel + "'" +  "," + "Doors=" + "'" + c.Doors + "'" + ","+ " Condition=" + "'" + c.Condition + "'" + "," + " Price=" + "'" + c.Price + "'"  +  " Where ID =" + c.ID;
+                   "'" + c.Brand + "'" + "," +  "Model=" + "'" + c.Model + "'" + "," + "Year =" + "'" + c.Year + "'" + "," + "Engine =" + "'" + c.Engine + "'" + "," + "Fuel =" + "'" + c.Fuel + "'" +  "," + "Doors=" + c.Doors +  ","+ " Condition=" + "'" + c.Condition + "'" + "," + " Price=" + "'" + c.Price + "'"  +  " Where ID =" + c.ID;
 
+                
 
                 command.CommandType = CommandType.Text;
                 command.Connection = connection;
                 connection.Open();
                 command.ExecuteNonQuery();
-            }
-            catch (Exception)
+            //}
+            /*catch (Exception)
             {
 
                 MessageBox.Show("Incorrect data! Please enter again!");
@@ -74,10 +77,10 @@ namespace Cars_Project
             finally
             {
                 if (connection != null)
-                {
+                {*/
                     connection.Close();
-                }
-            }
+                //}
+           // }
         }
         public void Delete(Car c)
         {
@@ -91,7 +94,6 @@ namespace Cars_Project
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Incorrect data! Please enter again!");
             }
             finally

@@ -15,6 +15,7 @@ namespace Cars_Project
     public partial class Form2 : Form
     {
         int carID;
+        String select = "Select ID, Brand,  Model, Year, Engine, Fuel , Doors, Condition, Price from IdCars";
 
         public Form2()
         {
@@ -24,6 +25,8 @@ namespace Cars_Project
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'база_данни1DataSet4.IdCars' table. You can move, or remove it, as needed.
+            //this.idCarsTableAdapter.Fill(this.база_данни1DataSet4.IdCars);
             butPrevPage.Size = new Size(100, 100);
             GraphicsPath Gcircle = new GraphicsPath();
             Gcircle.AddEllipse(0,24, 100, 50);
@@ -51,7 +54,39 @@ namespace Cars_Project
             this.butDel.Region = new Region(Gcircle5);
 
 
-            this.idCarsTableAdapter2.Fill(this.база_данни1DataSet2.IdCars);
+            //this.IdCarsTableAdapter.Fill(this.база_данни1DataSet3.IdCars);
+            fillDataGrid(select);
+        }
+
+        private void fillDataGrid(String query)
+        {
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+
+            OleDbCommand command = new OleDbCommand(query, con);
+            con.Open();
+            OleDbDataReader dr = command.ExecuteReader();
+            BindingSource source = new BindingSource();
+            source.DataSource = dr;
+            dataGridView1.DataSource = source;
+            dr.Close();
+            con.Close();
+            /*
+              try
+            {
+                SqlConnection con = DBConnect();
+                SqlCommand command = new SqlCommand(query, con);
+                SqlDataReader dr = command.ExecuteReader();
+                dataGridView1.Rows.Clear();
+                BindingSource source = new BindingSource();
+                source.DataSource = dr;
+                dataGridView1.DataSource = source;
+                dr.Close();
+                con.Close();
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Could not receive information from the database!", "Data error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -141,17 +176,18 @@ namespace Cars_Project
             c.Price = textBox5.Text;
             h.Update(c);
 
-            DataTable dataTable = h.SelectAll();
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = dataTable;
-            dataGridView1.DataSource = bindingSource;
+            /* DataTable dataTable = h.SelectAll();
+             BindingSource bindingSource = new BindingSource();
+             bindingSource.DataSource = dataTable;
+             dataGridView1.DataSource = bindingSource;*/
+            fillDataGrid(select);
         }
 
         int selectedRow;
         private void butDel_Click(object sender, EventArgs e)
         {
             Car c = new Car();
-            c.ID = textBox5.Text;
+            c.ID = textBox6.Text;
             h.Delete(c);
 
             selectedRow = dataGridView1.CurrentCell.RowIndex;
@@ -178,5 +214,5 @@ namespace Cars_Project
             comboBox4.SelectedIndex = 0;
         }*/
 
+        }
     }
-}

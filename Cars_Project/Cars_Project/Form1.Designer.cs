@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.idCarsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.база_данни1DataSet1 = new Cars_Project.База_данни1DataSet1();
+            this.база_данни1DataSet1 = new Cars_Project.База_данни1DataSet4();
             this.база_данни1DataSet = new Cars_Project.База_данни1DataSet();
             this.базаданни1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idCarsTableAdapter = new Cars_Project.База_данни1DataSet1TableAdapters.IdCarsTableAdapter();
+            this.idCarsTableAdapter = new Cars_Project.База_данни1DataSet4TableAdapters.IdCarsTableAdapter();
             this.butContinue = new System.Windows.Forms.Button();
             this.butExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.idCarsBindingSource)).BeginInit();
@@ -113,9 +113,9 @@
         #endregion
         private System.Windows.Forms.BindingSource базаданни1DataSetBindingSource;
         private База_данни1DataSet база_данни1DataSet;
-        private База_данни1DataSet1 база_данни1DataSet1;
+        private База_данни1DataSet4 база_данни1DataSet1;
         private System.Windows.Forms.BindingSource idCarsBindingSource;
-        private База_данни1DataSet1TableAdapters.IdCarsTableAdapter idCarsTableAdapter;
+        private База_данни1DataSet4TableAdapters.IdCarsTableAdapter idCarsTableAdapter;
         private System.Windows.Forms.Button butContinue;
         private System.Windows.Forms.Button butExit;
     }
