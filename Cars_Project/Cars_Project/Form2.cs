@@ -59,34 +59,24 @@ namespace Cars_Project
         }
 
         private void fillDataGrid(String query)
-        {
-            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
-
-            OleDbCommand command = new OleDbCommand(query, con);
-            con.Open();
-            OleDbDataReader dr = command.ExecuteReader();
-            BindingSource source = new BindingSource();
-            source.DataSource = dr;
-            dataGridView1.DataSource = source;
-            dr.Close();
-            con.Close();
-            /*
-              try
+        {            
+            try
             {
-                SqlConnection con = DBConnect();
-                SqlCommand command = new SqlCommand(query, con);
-                SqlDataReader dr = command.ExecuteReader();
-                dataGridView1.Rows.Clear();
+                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+
+                OleDbCommand command = new OleDbCommand(query, con);
+                con.Open();
+                OleDbDataReader dr = command.ExecuteReader();
                 BindingSource source = new BindingSource();
                 source.DataSource = dr;
                 dataGridView1.DataSource = source;
                 dr.Close();
                 con.Close();
             }
-            catch (SqlException)
+            catch (Exception)
             {
                 MessageBox.Show("Could not receive information from the database!", "Data error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -194,25 +184,31 @@ namespace Cars_Project
             dataGridView1.Rows.RemoveAt(selectedRow);
         }
 
-       /* private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            tabControl1.Visible = true;
-            string[] lines = System.IO.File.ReadAllLines("C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Fuel.txt");
-            foreach (string str in lines)
-            { comboBox2.Items.Add(str); }
-            comboBox2.SelectedIndex = 0;
+            fillDataGrid(select);
+            
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tabControl1.Visible = true;
-            string[] lines = System.IO.File.ReadAllLines(" C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Condition.txt");
-            foreach(String str in lines)
-            {
-                comboBox4.Items.Add(str);
-            }
-            comboBox4.SelectedIndex = 0;
-        }*/
+        /* private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             tabControl1.Visible = true;
+             string[] lines = System.IO.File.ReadAllLines("C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Fuel.txt");
+             foreach (string str in lines)
+             { comboBox2.Items.Add(str); }
+             comboBox2.SelectedIndex = 0;
+         }
 
-        }
+         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             tabControl1.Visible = true;
+             string[] lines = System.IO.File.ReadAllLines(" C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Condition.txt");
+             foreach(String str in lines)
+             {
+                 comboBox4.Items.Add(str);
+             }
+             comboBox4.SelectedIndex = 0;
+         }*/
+
+    }
     }
