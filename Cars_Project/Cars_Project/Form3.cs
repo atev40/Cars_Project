@@ -61,7 +61,7 @@ namespace Cars_Project
             command.Connection = connection;
 
             connection.Open();
-            //command.ExecuteNonQuery();
+            
 
             OleDbDataReader dataReader = command.ExecuteReader();
 

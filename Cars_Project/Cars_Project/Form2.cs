@@ -25,7 +25,7 @@ namespace Cars_Project
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'база_данни1DataSet4.IdCars' table. You can move, or remove it, as needed.
+            
            //this.idCarsTableAdapter.Fill(this.база_данни1DataSet4.IdCars);
             butPrevPage.Size = new Size(100, 100);
             GraphicsPath Gcircle = new GraphicsPath();
@@ -86,13 +86,14 @@ namespace Cars_Project
 
         private void butNextPage_Click(object sender, EventArgs e)
         {
-            carID = int.Parse(textBox6.Text);
-            if (carID <= 0)
+          
+            if (textBox6.Text == "")
             {
                 MessageBox.Show("Please choose a car!", "No car chosen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
+                carID = int.Parse(textBox6.Text);
                 this.Hide();
                 Form3 frm = new Form3(carID.ToString());
                 frm.Show();
@@ -113,7 +114,7 @@ namespace Cars_Project
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
 
-               // carID = (int)row.Cells[0].Value;
+               
 
                 
                 textBox6.Text = row.Cells[0].Value.ToString();
@@ -175,11 +176,7 @@ namespace Cars_Project
              BindingSource bindingSource = new BindingSource();
              bindingSource.DataSource = dataTable;
              dataGridView1.DataSource = bindingSource;
-            //fillDataGrid(select);
-
-            //this.Hide();
-            //Form2 form2 = new Form2();
-            //form2.Show();
+            
         }
 
         int selectedRow;
@@ -199,25 +196,7 @@ namespace Cars_Project
             
         }
 
-        /* private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-         {
-             tabControl1.Visible = true;
-             string[] lines = System.IO.File.ReadAllLines("C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Fuel.txt");
-             foreach (string str in lines)
-             { comboBox2.Items.Add(str); }
-             comboBox2.SelectedIndex = 0;
-         }
-
-         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-         {
-             tabControl1.Visible = true;
-             string[] lines = System.IO.File.ReadAllLines(" C:\\Users\\ACER\\source\\repos\\Cars_Project3\\Cars_Project\\Cars_Project\\Condition.txt");
-             foreach(String str in lines)
-             {
-                 comboBox4.Items.Add(str);
-             }
-             comboBox4.SelectedIndex = 0;
-         }*/
+        
 
     }
     }

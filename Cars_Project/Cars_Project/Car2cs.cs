@@ -30,27 +30,7 @@ namespace Cars_Project
         {
             try
             {
-                /*String query = "INSERT INTO IdCars (Brand, Model,ProdYear, Engine, Fuel, Doors, Condition, Price) " +
-                    "VALUES(@Brand,@Model,@ProdYear,@Engine,@Fuel,@Doors,@Condition,@Price)";
-
-                command.CommandType = CommandType.Text;
-                command.CommandText = query;
-                command.Connection = connection;
-
-                command.Parameters.AddWithValue("@brand", c.Brand);
-                command.Parameters.AddWithValue("@model", c.Model);
-                command.Parameters.AddWithValue("@ProdYear", c.Year);
-                command.Parameters.AddWithValue("@engine", c.Engine);
-                command.Parameters.AddWithValue("@fuel", c.Fuel);
-                command.Parameters.AddWithValue("@doors", c.Doors);
-                command.Parameters.AddWithValue("@condition", c.Condition);
-                command.Parameters.AddWithValue("@price", c.Price);
-                command.Parameters.AddWithValue("@id", c.ID);
-
-
-                connection.Open();
-
-                command.ExecuteNonQuery();*/
+                
 
                 command.CommandText = "INSERT INTO IdCars(Brand, Model, ProdYear, Engine, Fuel, Doors, Condition, Price)VALUES ("
                     + "'" + c.Brand + "'" + "," + "'" + c.Model + "'" + "," + "'" + c.Year + "'" + "," + "'" + c.Engine + "'" + "," + "'" + c.Fuel + "'" + "," + "'" + c.Doors + "'" + "," + "'" + c.Condition + "'" + "," + "'" + c.Price + "'" + ")";
@@ -86,26 +66,7 @@ namespace Cars_Project
 
             try
             {
-                //connection.Open();
-                //command.CommandType = CommandType.Text;
-            //command.CommandText = query;
-            //command.Connection = connection;
-            //command = new OleDbCommand(query, connection);
                 
-                  /*  command.Parameters.AddWithValue("@brand", c.Brand);
-                    command.Parameters.AddWithValue("@model", c.Model);
-                    command.Parameters.AddWithValue("@ProdYear", c.Year);
-                    command.Parameters.AddWithValue("@engine", c.Engine);
-                    command.Parameters.AddWithValue("@fuel", c.Fuel);
-                    command.Parameters.AddWithValue("@doors", c.Doors);
-                    command.Parameters.AddWithValue("@condition", c.Condition);
-                    command.Parameters.AddWithValue("@price", c.Price);
-                    command.Parameters.AddWithValue("@id", c.ID);*/
-
-
-                
-
-                //command.ExecuteNonQuery();
 
 
 
