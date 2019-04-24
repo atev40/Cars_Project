@@ -17,7 +17,7 @@ namespace Cars_Project
         OleDbCommand command;
         private void ConnectTo()
         {
-            //connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
            //  connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
 
             command = connection.CreateCommand();
@@ -30,8 +30,8 @@ namespace Cars_Project
         {
             try
             {
-                String query = "INSERT INTO IdCars (Brand, Model, Engine, Fuel, Doors, Condition, Price) " +
-                    "VALUES(@Brand,@Model,@Engine,@Fuel,@Doors,@Condition,@Price)";
+                String query = "INSERT INTO IdCars (Brand, Model,ProdYear, Engine, Fuel, Doors, Condition, Price) " +
+                    "VALUES(@Brand,@Model,@ProdYear,@Engine,@Fuel,@Doors,@Condition,@Price)";
 
                 command.CommandType = CommandType.Text;
                 command.CommandText = query;
@@ -39,7 +39,7 @@ namespace Cars_Project
 
                 command.Parameters.AddWithValue("@brand", c.Brand);
                 command.Parameters.AddWithValue("@model", c.Model);
-                //command.Parameters.AddWithValue("@year", c.Year);
+                command.Parameters.AddWithValue("@ProdYear", c.Year);
                 command.Parameters.AddWithValue("@engine", c.Engine);
                 command.Parameters.AddWithValue("@fuel", c.Fuel);
                 command.Parameters.AddWithValue("@doors", c.Doors);
@@ -88,7 +88,7 @@ namespace Cars_Project
             MessageBox.Show(c.Condition, "");
             MessageBox.Show(c.Price, "");*/
 
-            String query = @"UPDATE IdCars SET Brand=@brand, Model=@model, Engine=@engine, Fuel=@fuel, Doors=@doors, Condition=@condition, Price=@price WHERE ID=@id";
+            String query = @"UPDATE IdCars SET Brand=@brand, Model=@model, ProdYear=@ProdYear, Engine=@engine, Fuel=@fuel, Doors=@doors, Condition=@condition, Price=@price WHERE ID=@id";
 
             //String query = @"UPDATE IdCars SET Brand=@brand, Model=@model, Year=@year WHERE ID=@id";
 
@@ -101,7 +101,7 @@ namespace Cars_Project
                 
                     command.Parameters.AddWithValue("@brand", c.Brand);
                     command.Parameters.AddWithValue("@model", c.Model);
-                    //command.Parameters.AddWithValue("@year", c.Year);
+                    command.Parameters.AddWithValue("@ProdYear", c.Year);
                     command.Parameters.AddWithValue("@engine", c.Engine);
                     command.Parameters.AddWithValue("@fuel", c.Fuel);
                     command.Parameters.AddWithValue("@doors", c.Doors);

@@ -15,7 +15,7 @@ namespace Cars_Project
     public partial class Form2 : Form
     {
         int carID;
-        String select = "Select ID, Brand,  Model, Year, Engine, Fuel , Doors, Condition, Price from IdCars";
+        String select = "Select ID, Brand,  Model, ProdYear, Engine, Fuel , Doors, Condition, Price from IdCars";
 
         public Form2()
         {
@@ -63,7 +63,7 @@ namespace Cars_Project
             try
             {
                 //OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
-               // OleDbConnection con = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+               OleDbConnection con = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
                 OleDbCommand command = new OleDbCommand(query, con);
                 con.Open();
                 OleDbDataReader dr = command.ExecuteReader();

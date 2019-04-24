@@ -16,13 +16,13 @@ namespace Cars_Project
     {
         private String carID;
         //String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
-       // String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
+        String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
         OleDbConnection connection;
         OleDbCommand command;
 
         private void ConnectTo()
         {
-            //connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
           //  connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
             command = connection.CreateCommand();
         }
@@ -69,7 +69,7 @@ namespace Cars_Project
             {
                 label1.Text = dataReader["Brand"].ToString();
                 label2.Text = dataReader["Model"].ToString();
-                label3.Text = dataReader["Year"].ToString();
+                label3.Text = dataReader["ProdYear"].ToString();
                 label4.Text = dataReader["Engine"].ToString();
                 label5.Text = dataReader["Fuel"].ToString();
                 label6.Text = dataReader["Doors"].ToString();
