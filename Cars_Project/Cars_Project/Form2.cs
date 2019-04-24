@@ -26,7 +26,7 @@ namespace Cars_Project
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'база_данни1DataSet4.IdCars' table. You can move, or remove it, as needed.
-          //  this.idCarsTableAdapter.Fill(this.база_данни1DataSet4.IdCars);
+           //this.idCarsTableAdapter.Fill(this.база_данни1DataSet4.IdCars);
             butPrevPage.Size = new Size(100, 100);
             GraphicsPath Gcircle = new GraphicsPath();
             Gcircle.AddEllipse(0,24, 100, 50);
@@ -166,10 +166,10 @@ namespace Cars_Project
             c.Price = textBox5.Text;
             h.Update(c);
 
-             DataTable dataTable = h.SelectAll();
+             /*DataTable dataTable = h.SelectAll();
              BindingSource bindingSource = new BindingSource();
              bindingSource.DataSource = dataTable;
-             dataGridView1.DataSource = bindingSource;
+             dataGridView1.DataSource = bindingSource;*/
             fillDataGrid(select);
         }
 
