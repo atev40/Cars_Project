@@ -86,6 +86,7 @@ namespace Cars_Project
 
         private void butNextPage_Click(object sender, EventArgs e)
         {
+            carID = int.Parse(textBox6.Text);
             if (carID <= 0)
             {
                 MessageBox.Show("Please choose a car!", "No car chosen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -111,8 +112,10 @@ namespace Cars_Project
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-                carID = (int)row.Cells[0].Value;
 
+               // carID = (int)row.Cells[0].Value;
+
+                
                 textBox6.Text = row.Cells[0].Value.ToString();
                 textBox1.Text = row.Cells[1].Value.ToString();
                 textBox2.Text = row.Cells[2].Value.ToString();
@@ -149,6 +152,8 @@ namespace Cars_Project
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = dataTable;
             dataGridView1.DataSource = bindingSource;
+
+           
             
         }
 
@@ -166,11 +171,15 @@ namespace Cars_Project
             c.Price = textBox5.Text;
             h.Update(c);
 
-             /*DataTable dataTable = h.SelectAll();
+             DataTable dataTable = h.SelectAll();
              BindingSource bindingSource = new BindingSource();
              bindingSource.DataSource = dataTable;
-             dataGridView1.DataSource = bindingSource;*/
-            fillDataGrid(select);
+             dataGridView1.DataSource = bindingSource;
+            //fillDataGrid(select);
+
+            //this.Hide();
+            //Form2 form2 = new Form2();
+            //form2.Show();
         }
 
         int selectedRow;
