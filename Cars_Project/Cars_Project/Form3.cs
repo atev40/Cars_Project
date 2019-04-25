@@ -16,7 +16,6 @@ namespace Cars_Project
     public partial class Form3 : Form
     {
         private String carID;
-        //String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
         OleDbConnection connection;
         OleDbCommand command;
 
@@ -98,6 +97,7 @@ namespace Cars_Project
         private void lookUpPic()
         {
             String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
+            //String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
 
             ConnectTo();
             command.CommandText = "SELECT Image FROM IdCars WHERE ID=" + carID;
