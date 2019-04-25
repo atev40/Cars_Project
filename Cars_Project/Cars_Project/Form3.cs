@@ -76,9 +76,9 @@ namespace Cars_Project
                 label7.Text = dataReader["Condition"].ToString();
                 label8.Text = dataReader["Price"].ToString();
 
-                path += dataReader["Image"].ToString();
+              /*  path += dataReader["Image"].ToString();
                 Image carPic = Image.FromFile(path);
-                pictureBox1.Image = carPic;
+                pictureBox1.Image = carPic;*/
             }
 
             dataReader.Close();
