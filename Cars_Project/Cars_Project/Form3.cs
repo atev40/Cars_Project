@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.OleDb;
+using System.Net.NetworkInformation;
 
 namespace Cars_Project
 {
@@ -49,6 +50,12 @@ namespace Cars_Project
             GraphicsPath Gcircle6 = new GraphicsPath();
             Gcircle6.AddEllipse(0,24,100, 50);
             this.butBack.Region = new Region(Gcircle6);
+            loadCarInfo(carID);
+
+            button1.Size = new Size(100, 100);
+            GraphicsPath Gcircle7 = new GraphicsPath();
+            Gcircle7.AddEllipse(0, 24, 100, 50);
+            this.button1.Region = new Region(Gcircle7);
             loadCarInfo(carID);
         }
 
@@ -109,6 +116,33 @@ namespace Cars_Project
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.auto-data.net/bg/");
+           /*if (CheckConnection())
+            {
+
+            }*/
+        }
+
+        private Boolean CheckConnection()
+        {
+            try
+            {
+                Ping myPing = new Ping();
+                String host = "google.com";
+                byte[] buffer = new byte[32];
+                int timeout = 1000;
+                PingOptions pingOptions = new PingOptions();
+                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+                return (reply.Status == IPStatus.Success);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

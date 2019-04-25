@@ -72,9 +72,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(217, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(258, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(530, 322);
+            this.pictureBox1.Size = new System.Drawing.Size(546, 332);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -172,9 +172,9 @@
             // 
             this.butBack.BackColor = System.Drawing.Color.CadetBlue;
             this.butBack.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butBack.Location = new System.Drawing.Point(6, 352);
+            this.butBack.Location = new System.Drawing.Point(6, 290);
             this.butBack.Name = "butBack";
-            this.butBack.Size = new System.Drawing.Size(104, 39);
+            this.butBack.Size = new System.Drawing.Size(104, 44);
             this.butBack.TabIndex = 23;
             this.butBack.Text = "Back";
             this.butBack.UseVisualStyleBackColor = false;
@@ -273,19 +273,20 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(6, 292);
+            this.button1.Location = new System.Drawing.Point(135, 290);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 39);
+            this.button1.Size = new System.Drawing.Size(104, 44);
             this.button1.TabIndex = 32;
             this.button1.Text = "More Info";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cars_Project.Properties.Resources.ImageForm2;
-            this.ClientSize = new System.Drawing.Size(792, 391);
+            this.ClientSize = new System.Drawing.Size(816, 391);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
