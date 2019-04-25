@@ -16,15 +16,14 @@ namespace Cars_Project
     public partial class Form3 : Form
     {
         private String carID;
-        //String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
-        String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
+        //String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
         OleDbConnection connection;
         OleDbCommand command;
 
         private void ConnectTo()
         {
-            //connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
-          connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+       //   connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
             command = connection.CreateCommand();
         }
 
@@ -62,7 +61,7 @@ namespace Cars_Project
         private void loadCarInfo(String carID)
         {
             ConnectTo();
-            command.CommandText = "SELECT * FROM IdCars WHERE ID=" + carID;
+            command.CommandText = "SELECT Brand,Model,ProdYear,Engine,Fuel,Doors,Condition,Price FROM IdCars WHERE ID=" + carID;
             command.CommandType = CommandType.Text;
 
             command.Connection = connection;
@@ -83,13 +82,40 @@ namespace Cars_Project
                 label7.Text = dataReader["Condition"].ToString();
                 label8.Text = dataReader["Price"].ToString();
 
-              /*  path += dataReader["Image"].ToString();
+                
+
+                /*path += dataReader["Image"].ToString();
                 Image carPic = Image.FromFile(path);
                 pictureBox1.Image = carPic;*/
             }
-
             dataReader.Close();
+
             connection.Close();
+            lookUpPic();
+
+        }
+
+        private void lookUpPic()
+        {
+            String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
+
+            ConnectTo();
+            command.CommandText = "SELECT Image FROM IdCars WHERE ID=" + carID;
+            command.CommandType = CommandType.Text;
+            command.Connection = connection;
+            connection.Open();
+            OleDbDataReader dataReader2 = command.ExecuteReader();
+
+            if (dataReader2.Read() && dataReader2.GetValue(0) != DBNull.Value)
+            {
+                path += dataReader2["Image"].ToString();
+               // path += dataReader.GetString(0);
+                Image carPic = Image.FromFile(path);
+                pictureBox1.Image = carPic;
+            }
+            dataReader2.Close();
+            connection.Close();
+
         }
 
 
@@ -120,29 +146,12 @@ namespace Cars_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.auto-data.net/bg/");
-           /*if (CheckConnection())
-            {
+            String link = "https://www.auto-data.net/bg/results?search=";
 
-            }*/
+            link += label1.Text + "%20" + label2.Text;
+
+            System.Diagnostics.Process.Start(link);
         }
 
-        private Boolean CheckConnection()
-        {
-            try
-            {
-                Ping myPing = new Ping();
-                String host = "google.com";
-                byte[] buffer = new byte[32];
-                int timeout = 1000;
-                PingOptions pingOptions = new PingOptions();
-                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
-                return (reply.Status == IPStatus.Success);
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
     }
 }
