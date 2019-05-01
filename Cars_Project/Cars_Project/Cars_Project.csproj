@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>power_logo_XSV_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -171,6 +174,7 @@
     <None Include="temp_5338_0.jpg" />
     <None Include="POWER.jpg" />
     <None Include="ImageForm2.jpg" />
+    <Content Include="power_logo_XSV_icon.ico" />
     <Content Include="База данни1.accdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
