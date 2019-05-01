@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.idCarsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.база_данни1DataSet1 = new Cars_Project.База_данни1DataSet4();
             this.база_данни1DataSet = new Cars_Project.База_данни1DataSet();
@@ -99,6 +100,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.butExit);
             this.Controls.Add(this.butContinue);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

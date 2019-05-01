@@ -23,7 +23,7 @@ namespace Cars_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             butExit.Size = new Size(200, 200);
             GraphicsPath Gcircle = new GraphicsPath();
             Gcircle.AddEllipse(0, 50, 200,100);
