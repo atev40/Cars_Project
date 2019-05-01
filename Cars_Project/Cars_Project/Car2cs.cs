@@ -17,8 +17,9 @@ namespace Cars_Project
         OleDbCommand command;
         private void ConnectTo()
         {
-           connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
-         //  connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
+
+          // connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+           connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
 
             command = connection.CreateCommand();
         }
@@ -60,7 +61,6 @@ namespace Cars_Project
         {
            
 
-            String query = @"UPDATE IdCars SET Brand=@brand, Model=@model, ProdYear=@ProdYear, Engine=@engine, Fuel=@fuel, Doors=@doors, Condition=@condition, Price=@price WHERE ID=@id";
 
           
 

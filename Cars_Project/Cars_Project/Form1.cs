@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Drawing.Drawing2D;
+using System.IO;
 
 namespace Cars_Project
 {
@@ -23,7 +24,6 @@ namespace Cars_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             butExit.Size = new Size(200, 200);
             GraphicsPath Gcircle = new GraphicsPath();
             Gcircle.AddEllipse(0, 50, 200,100);
@@ -33,9 +33,6 @@ namespace Cars_Project
             GraphicsPath Gcircle2 = new GraphicsPath();
             Gcircle2.AddEllipse(0, 50, 200, 100);
             this.butContinue.Region = new Region(Gcircle2);
-
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,12 +48,10 @@ namespace Cars_Project
         }
 
         private void butExit_Click(object sender, EventArgs e)
-
         {
             Application.Exit();
-                }
+        }
  
-       
     }
 }
     

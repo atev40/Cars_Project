@@ -91,7 +91,6 @@
             this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -224,7 +223,6 @@
             this.label11.Size = new System.Drawing.Size(42, 20);
             this.label11.TabIndex = 26;
             this.label11.Text = "Year:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 

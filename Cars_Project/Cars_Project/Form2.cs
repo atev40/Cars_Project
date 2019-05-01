@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Drawing.Drawing2D;
+using System.IO;
 
 namespace Cars_Project
 {
@@ -16,6 +17,7 @@ namespace Cars_Project
     {
         int carID;
         String select = "Select ID, Brand,  Model, ProdYear, Engine, Fuel , Doors, Condition, Price from IdCars";
+        Vechile h = new Vechile();
 
         public Form2()
         {
@@ -25,27 +27,26 @@ namespace Cars_Project
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
-           //this.idCarsTableAdapter.Fill(this.база_данни1DataSet4.IdCars);
+
             butPrevPage.Size = new Size(100, 100);
             GraphicsPath Gcircle = new GraphicsPath();
-            Gcircle.AddEllipse(0,24, 100, 50);
+            Gcircle.AddEllipse(0, 24, 100, 50);
             this.butPrevPage.Region = new Region(Gcircle);
 
             butNextPage.Size = new Size(100, 100);
             GraphicsPath Gcircle2 = new GraphicsPath();
-            Gcircle2.AddEllipse(0, 24, 100,50);
+            Gcircle2.AddEllipse(0, 24, 100, 50);
             this.butNextPage.Region = new Region(Gcircle2);
 
 
             butInsert.Size = new Size(100, 30);
             GraphicsPath Gcircle3 = new GraphicsPath();
-            Gcircle3.AddEllipse(0, 0, 90,90);
+            Gcircle3.AddEllipse(0, 0, 90, 90);
             this.butInsert.Region = new Region(Gcircle3);
 
             butUpdate.Size = new Size(100, 30);
             GraphicsPath Gcircle4 = new GraphicsPath();
-            Gcircle4.AddEllipse(0, 0,90, 90);
+            Gcircle4.AddEllipse(0, 0, 90, 90);
             this.butUpdate.Region = new Region(Gcircle4);
 
             butDel.Size = new Size(100, 30);
@@ -53,17 +54,19 @@ namespace Cars_Project
             Gcircle5.AddEllipse(0, 0, 90, 90);
             this.butDel.Region = new Region(Gcircle5);
 
-
-            
             fillDataGrid(select);
         }
 
         private void fillDataGrid(String query)
-        {            
+        {
             try
             {
-            //  OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
-              OleDbConnection con = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+                string path = Environment.CurrentDirectory;
+                string newPath = Path.GetFullPath(Path.Combine(path, "..", ".."));
+                string conPath = newPath + "\\База данни1.accdb";
+                OleDbConnection con = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + conPath);
+
+
                 OleDbCommand command = new OleDbCommand(query, con);
                 con.Open();
                 OleDbDataReader dr = command.ExecuteReader();
@@ -79,14 +82,8 @@ namespace Cars_Project
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void butNextPage_Click(object sender, EventArgs e)
         {
-          
             if (textBox6.Text == "")
             {
                 MessageBox.Show("Please choose a car!", "No car chosen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -113,10 +110,6 @@ namespace Cars_Project
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-
-               
-
-                
                 textBox6.Text = row.Cells[0].Value.ToString();
                 textBox1.Text = row.Cells[1].Value.ToString();
                 textBox2.Text = row.Cells[2].Value.ToString();
@@ -126,12 +119,8 @@ namespace Cars_Project
                 comboBox3.Text = row.Cells[6].Value.ToString();
                 comboBox4.Text = row.Cells[7].Value.ToString();
                 textBox5.Text = row.Cells[8].Value.ToString();
-
-
             }
         }
-
-        Vechile h = new Vechile();
 
         private void butInsert_Click(object sender, EventArgs e)
         {
@@ -145,17 +134,13 @@ namespace Cars_Project
             c.Fuel = comboBox2.Text;
             c.Doors = comboBox3.Text;
             c.Condition = comboBox4.Text;
-            c.Price= textBox5.Text;
+            c.Price = textBox5.Text;
             h.Insert(c);
-
 
             DataTable dataTable = h.SelectAll();
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = dataTable;
             dataGridView1.DataSource = bindingSource;
-
-           
-            
         }
 
         private void butUpdate_Click(object sender, EventArgs e)
@@ -172,11 +157,10 @@ namespace Cars_Project
             c.Price = textBox5.Text;
             h.Update(c);
 
-             DataTable dataTable = h.SelectAll();
-             BindingSource bindingSource = new BindingSource();
-             bindingSource.DataSource = dataTable;
-             dataGridView1.DataSource = bindingSource;
-            
+            DataTable dataTable = h.SelectAll();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = dataTable;
+            dataGridView1.DataSource = bindingSource;
         }
 
         int selectedRow;
@@ -193,10 +177,6 @@ namespace Cars_Project
         private void button1_Click(object sender, EventArgs e)
         {
             fillDataGrid(select);
-            
         }
-
-        
-
     }
-    }
+}

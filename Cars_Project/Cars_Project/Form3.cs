@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.OleDb;
 using System.Net.NetworkInformation;
+using System.IO;
 
 namespace Cars_Project
 {
@@ -21,12 +22,12 @@ namespace Cars_Project
 
         private void ConnectTo()
         {
-       // connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\База данни1.accdb");
-          connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source =C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\База данни1.accdb");
+            string path = Environment.CurrentDirectory;
+            string newPath = Path.GetFullPath(Path.Combine(path, "..", ".."));
+            string conPath = newPath + "\\База данни1.accdb";
+            connection = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + conPath);
             command = connection.CreateCommand();
         }
-
-
 
         public Form3()
         {
@@ -40,7 +41,6 @@ namespace Cars_Project
             StartPosition = FormStartPosition.CenterScreen;
             this.carID = carID;
         }
-
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -62,12 +62,8 @@ namespace Cars_Project
             ConnectTo();
             command.CommandText = "SELECT Brand,Model,ProdYear,Engine,Fuel,Doors,Condition,Price FROM IdCars WHERE ID=" + carID;
             command.CommandType = CommandType.Text;
-
             command.Connection = connection;
-
             connection.Open();
-            
-
             OleDbDataReader dataReader = command.ExecuteReader();
 
             while (dataReader.Read())
@@ -81,11 +77,6 @@ namespace Cars_Project
                 label7.Text = dataReader["Condition"].ToString();
                 label8.Text = dataReader["Price"].ToString();
 
-                
-
-                /*path += dataReader["Image"].ToString();
-                Image carPic = Image.FromFile(path);
-                pictureBox1.Image = carPic;*/
             }
             dataReader.Close();
 
@@ -96,8 +87,11 @@ namespace Cars_Project
 
         private void lookUpPic()
         {
-            //String path = @"C:\Users\User\source\repos\atev40\Cars_Project\Cars_Project\Cars_Project\Images\";
-            String path = @"C:\Users\ACER\source\repos\Cars_Project3\Cars_Project\Cars_Project\Images\";
+            string path = Environment.CurrentDirectory;
+            string newPath = Path.GetFullPath(Path.Combine(path, "..", ".."));
+            string conPath = newPath + "\\База данни1.accdb";
+            string folderPath = newPath + "\\Images\\";
+            OleDbConnection con = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + conPath);
 
             ConnectTo();
             command.CommandText = "SELECT Image FROM IdCars WHERE ID=" + carID;
@@ -108,24 +102,18 @@ namespace Cars_Project
 
             if (dataReader2.Read() && dataReader2.GetValue(0) != DBNull.Value)
             {
-                path += dataReader2["Image"].ToString();
-               // path += dataReader.GetString(0);
-                Image carPic = Image.FromFile(path);
+                folderPath += dataReader2["Image"].ToString();
+                Image carPic = Image.FromFile(folderPath);
                 pictureBox1.Image = carPic;
             }
             dataReader2.Close();
             connection.Close();
-
         }
-
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
-
         }
-
-        
 
         private void butBack_Click(object sender, EventArgs e)
         {
@@ -134,24 +122,11 @@ namespace Cars_Project
             form2.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             String link = "https://www.auto-data.net/bg/results?search=";
-
             link += label1.Text + "%20" + label2.Text;
-
             System.Diagnostics.Process.Start(link);
         }
-
     }
 }
